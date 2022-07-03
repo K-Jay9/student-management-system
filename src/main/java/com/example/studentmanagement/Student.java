@@ -1,11 +1,22 @@
 package com.example.studentmanagement;
 
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDate;
 
+
+@Entity
+@Table
 public class Student
 {
 
+
+    private String StudentName;
+    @Id
     private String RegNo;
+
     private String CourseName;
     private String CourseCode;
     private String HallName;
@@ -43,6 +54,14 @@ public class Student
                 ", joining=" + joining +
                 ", graduation=" + graduation +
                 '}';
+    }
+
+    public String getStudentName() {
+        return StudentName;
+    }
+
+    public void setStudentName(String studentName) {
+        StudentName = studentName;
     }
 
     public String getRegNo() {
